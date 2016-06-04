@@ -103,6 +103,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 # for login, logout views
 from django.core.urlresolvers import reverse_lazy
 
@@ -112,3 +115,4 @@ LOGOUT_URL = reverse_lazy('logout')
 
 # E-mail
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
