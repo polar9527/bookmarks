@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
 
 )
 
@@ -116,8 +117,38 @@ LOGOUT_URL = reverse_lazy('logout')
 # E-mail
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# with open(os.path.join(BASE_DIR, 'passwd')) as f:
+#     secretKey = f.read().strip()
+#
+# EMAIL_HOST = 'smtp.163.com'
+# EMAIL_HOST_USER = 'polar9527@163.com'
+# EMAIL_HOST_PASSWORD = secretKey
+# EMAIL_PORT = 25
+# EMAIL_USE_TLS = True
 
+# python-social-auth settings
 AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.Facebook2OAuth2',
+    'social.backends.google.GoogleOAuth2',
+    'social.backends.twitter.TwitterOAuth',
+
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
 )
+
+with open(os.path.join(BASE_DIR, 'facebookAPP.passwd')) as f:
+    fpwlist = f.read().strip().split('-')
+    fkey, fsecret = fpwlist[0], fpwlist[1]
+
+SOCIAL_AUTH_FACEBOOK_KEY = fkey  # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = fsecret    # Facebook App Secret
+
+# with open(os.path.join(BASE_DIR, 'facebookAPP.passwd')) as t:
+#     tpwlist = t.read().strip().split('-')
+#     tkey, tsecret = tpwlist[0], tpwlist[1]
+#
+# SOCIAL_AUTH_TWITTER_KEY = ''
+# SOCIAL_AUTH_TWITTER_SECRET = ''
+#
+# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''

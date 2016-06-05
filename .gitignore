@@ -63,3 +63,7 @@ target/
 
 # pycharm
 .idea
+
+# password file
+*.passwd
+*.passwd~
