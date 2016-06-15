@@ -34,6 +34,7 @@ THUMBNAIL_DEBUG = True
 INSTALLED_APPS = (
     'account',
     'images',
+    'actions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
