@@ -17,7 +17,7 @@ with open(os.path.join(BASE_DIR, 'mysql.passwd')) as f:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bookmarks',
+        'NAME': 'bookmarksdb',
         'USER': 'bookmarks',
         'PASSWORD': mysqlpwd,
         'HOST': '127.0.0.1',
