@@ -9,7 +9,7 @@ ADMIN = (
     ('polar9527', 'polar9527@163.com'),
 )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.bookmarks.com', '127.0.0.1']
 
 with open(os.path.join(BASE_DIR, 'mysql.passwd')) as f:
     mysqlpwd = f.read().strip()
