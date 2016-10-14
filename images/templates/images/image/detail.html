@@ -14,7 +14,7 @@
         <div class="image-info">
             <div>
                 <span class="count">
-                    <span class="total">{{ total_likes }}</span>
+                    <span class="total total_likes">{{ total_likes }}</span>
                     like{{ total_likes|pluralize }}
                 </span>
                 <span class="count">
@@ -64,8 +64,8 @@
                     $('a.like').text(previous_action == 'like' ? 'Unlike' : 'Like');
 
                     // update total likes
-                    var previous_likes = parseInt($('span.count .total').text());
-                    $('span.count .total').text(previous_action == 'like' ? previous_likes + 1 : previous_likes - 1);
+                    var previous_likes = parseInt($('span.count .total_likes').text());
+                    $('span.count .total_likes').text(previous_action == 'like' ? previous_likes + 1 : previous_likes - 1);
                 }
         });
 
