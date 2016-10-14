@@ -1,5 +1,6 @@
 /**
- * Created by polar on 16-6-7.
+ * Created by polar.
+ * ec2-52-78-144-51.ap-northeast-2.compute.amazonaws.com
  */
 (function(){
     if(window.myBookmarklet!==undefined){
@@ -7,6 +8,6 @@
     }
     else{
         document.body.appendChild(document.createElement('script')).
-            src='http://127.0.0.1:8000/static/images/js/bookmarklet.js?r='+Math.floor(Math.random()*99999999999999999999);
+            src='http://www.bookmarks.com/static/images/js/bookmarklet.js?r='+Math.floor(Math.random()*99999999999999999999);
     }
 })();

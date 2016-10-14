@@ -1,6 +1,7 @@
 (function(){
   var jquery_version = '2.1.4';
-  var site_url = 'http://127.0.0.1:8000/';
+  var site_url = 'http://www.bookmarks.com/';
+  //var site_url = 'http://ec2-52-78-144-51.ap-northeast-2.compute.amazonaws.com/';
   var static_url = site_url + 'static/images/';
   var min_width = 100;
   var min_height = 100;
