@@ -75,5 +75,5 @@ target/
 db.sqlite3
 
 # static file
-static/
-media/
+/static/*
+/media/*
