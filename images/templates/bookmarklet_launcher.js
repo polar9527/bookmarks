@@ -1,6 +1,6 @@
 /**
  * Created by polar.
- * ec2-52-78-144-51.ap-northeast-2.compute.amazonaws.com
+ * ec2-52-78-179-108.ap-northeast-2.compute.amazonaws.com
  */
 (function(){
     if(window.myBookmarklet!==undefined){
