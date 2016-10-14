@@ -65,8 +65,7 @@ def image_like(request):
                 create_action(request.user, 'likes', image)
             else:
                 image.users_like.remove(request.user)
-            total_likes = image.users_like.count()
-            return JsonResponse({'status':'ok', 'total_likes':total_likes})
+            return JsonResponse({'status':'ok'})
         except:
             pass
     return JsonResponse({'status':'ko'})
