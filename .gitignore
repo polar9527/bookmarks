@@ -67,3 +67,13 @@ target/
 # password file
 *.passwd
 *.passwd~
+
+# pyenv
+.python-version
+
+# sqliteDB
+db.sqlite3
+
+# static file
+static/
+media/
