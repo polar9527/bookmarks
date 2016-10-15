@@ -20,6 +20,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    url(r'^$',
+        'django.contrib.auth.views.login',
+        name='login'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/', include('account.urls')),
     url('social-auth/',
